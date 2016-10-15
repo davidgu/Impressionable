@@ -33,4 +33,5 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile project(':jackson-core-2.8.4')
     compile project(':jackson-databind-2.8.4')
+    compile project(':javax.json-api-1.0')
 }
