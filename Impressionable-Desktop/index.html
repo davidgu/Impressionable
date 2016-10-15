@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Oleo+Script' rel='stylesheet' type='text/css'>
+
+<link type="text/css" rel="stylesheet" href="./css/main.css" />
+<link type="text/css" rel="stylesheet" href="./css/login.css" />
+
+
+<head>
+    <title>Impressionable</title>
+    <meta charset="UTF-8">
+</head>
+
+<body ng-app="impressionableApp" ng-controller="userController as userCtrl" id="background" ng-cloak="true">
+  <img id="loginCrest" ng-src="{{ backgroundImg }}" />
+  <div>
+    <div id="loginTitle" ng-hide="mainScreen.state"> Impressionable </div>
+    <div class="foreground" ng-show="loginScreen.state">
+      <div class="enableJQuery">
+      <div id="signInButton" class="loginButton" ng-click="changeToTrue(1, screenList, 'state')"> Sign In </div>
+      <br> <br> <br> <br>
+      <div id="signUpButton" class="loginButton" ng-click="changeToTrue(2, screenList, 'state')"> Sign Up </div>
+      <h1 id="loginCredit"> Created by <a class="link" onclick="openExternalLink('https://github.com/taran-gill')">Taran Gill</a>,
+        <a class="link" onclick="openExternalLink('https://github.com/david-GU')">David Gu</a>,
+        <a class="link" onclick="openExternalLink('https://github.com/hansenngai')"> Hansen Ngai</a>,
+        and Shayla Stausgaard
+        <a class="link" onclick="openExternalLink('https://hackwestern.com/')"> for Western Hacks 3 </a>
+      </h1>
+      </div>
+    </div>
+    <div class="foreground" ng-show="signInScreen.state">
+      <div class="enableJQuery">
+        <img class="loginBackArrow" src="images/backarrow.jpg" ng-click="changeToTrue(0, screenList, 'state')"/>
+        <form ng-submit="login(loginUsername, changeToTrue, 3, screenList, 'state')">
+          <h2 id="signInUsername"> Enter your username: <input id="signInInput" type="text" ng-model="loginUsername"> </h2>
+          <div ng-click="login(loginUsername, changeToTrue, 3, screenList, 'state')" id="loginButton"> Sign In </div>
+        </form>
+        <div id="usernameError" ng-hide="authenticatedLogin"> {{usernameMessage}} </div>
+        <div id="usernameMessage" ng-show="authenticatedLogin"> {{usernameMessage}} </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript" src="js/init.js"></script>
+<script>if (window.module) module = window.module;</script>
+
+</html>
