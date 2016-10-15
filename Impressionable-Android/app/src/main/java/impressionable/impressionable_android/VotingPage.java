@@ -8,8 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import com.fasterxml.jackson.databind.*;
+import java.io.File;
 
 public class VotingPage extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,4 +52,19 @@ public class VotingPage extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    public void loadFromJson(String filePath){   //Loads user data from json
+        ObjectMapper mapper = new ObjectMapper();
+        SessionData sessionData = new SessionData();
+        try {
+            sessionData = mapper.readValue(new File(filePath), SessionData.class);
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        System.out.println(sessionData.getSessionData().get(1).getName());
+
+
+    }
+
 }

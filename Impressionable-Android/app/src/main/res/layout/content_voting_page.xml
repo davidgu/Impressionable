@@ -8,10 +8,149 @@
     tools:context="impressionable.impressionable_android.VotingPage"
     tools:showIn="@layout/activity_voting_page">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            android:layout_margin="16dp"
+            android:text="Name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:id="@+id/major"
+            android:layout_margin="16dp"
+            android:text="Major"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/major"
+            android:id="@+id/minor"
+            android:layout_margin="16dp"
+            android:text="Minor"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/year"
+            android:layout_below="@id/minor"
+            android:text="Year"
+            android:layout_margin="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gpa"
+            android:layout_below="@id/year"
+            android:text="GPA"
+            android:layout_margin="16dp"/>
+
+
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Name ex"
+            android:ems="15"
+            android:id="@+id/editText"
+            android:layout_toRightOf="@id/name"
+            android:layout_margin="8dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Psychology ex"
+            android:ems="15"
+            android:id="@+id/editText3"
+            android:layout_alignBaseline="@+id/minor"
+            android:layout_alignBottom="@+id/minor"
+            android:layout_alignLeft="@+id/editText2"
+            android:layout_alignStart="@+id/editText2" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Engineering ex"
+            android:ems="15"
+            android:id="@+id/editText2"
+            android:layout_below="@+id/name"
+            android:layout_alignLeft="@+id/editText"
+            android:layout_alignStart="@+id/editText" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="1"
+            android:ems="10"
+            android:layout_above="@+id/gpa"
+            android:layout_alignLeft="@+id/editText3"
+            android:layout_alignStart="@+id/editText3"
+            android:id="@+id/editText4" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gpa"
+            android:id="@+id/yesno"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="YES"
+                android:id="@+id/yesbutton"
+                android:layout_weight="1"
+                android:layout_marginRight="30dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NO"
+                android:id="@+id/nobutton"
+                android:layout_weight="1"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yesno"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Previous"
+                android:id="@+id/prevbutton"
+
+                />
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="3.8"
+            android:ems="10"
+            android:id="@+id/editText5"
+            android:layout_below="@+id/editText4"
+            android:layout_alignLeft="@+id/editText4"
+            android:layout_alignStart="@+id/editText4" />
+
+    </RelativeLayout>
 
 </android.support.v4.widget.NestedScrollView>
