@@ -6,5 +6,13 @@
     "minor": null,
     "year": 2,
     "gpa": 4.00
+  },
+  {
+    "index": 2,
+    "name": "Gu David",
+    "major": "Engineering Software",
+    "minor": null,
+    "year": 1,
+    "gpa": 4.00
   }
-]
+  ]

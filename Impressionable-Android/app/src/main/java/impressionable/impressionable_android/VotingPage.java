@@ -8,7 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import android.widget.TextView;
+import java.io.*;
+import java.util.*;
+//import com.fasterxml.jackson.databind.ObjectMapper;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.File;
 
 public class VotingPage extends AppCompatActivity {
@@ -53,18 +60,30 @@ public class VotingPage extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void loadFromJson(){   //Loads user data from json
-        ObjectMapper mapper = new ObjectMapper();
-        SessionData sessionData = new SessionData();
+    public void loadFromJson(View v){   //Loads user data from json
+        String text = new String();
+        TextView t = (TextView)findViewById(R.id.editText2);
+
+
         try {
-            sessionData = mapper.readValue(new File("users.json"), SessionData.class);
+            InputStream inputStream = getAssets().open("users.json");
+            String text2 = convertStreamToString(inputStream);
+            JSONArray jsonArray = new JSONArray(text2);
+            text = jsonArray.getJSONObject(1).getString("name");
+
         }
         catch(Exception e){
-            System.out.println(e);
+            //t.setText(e.getClass().getName());
         }
-        System.out.println(sessionData.getSessionData().get(1).getName());
+
+        //t.setText(sessionData.getSessionData().get(1).getName());
+        t.setText(text);
 
 
+    }
+    static String convertStreamToString(java.io.InputStream is) {
+        java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
+        return s.hasNext() ? s.next() : "";
     }
 
 }
