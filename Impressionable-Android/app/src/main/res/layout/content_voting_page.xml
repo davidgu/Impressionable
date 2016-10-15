@@ -112,7 +112,8 @@
                 android:text="YES"
                 android:id="@+id/yesbutton"
                 android:layout_weight="1"
-                android:layout_marginRight="30dp"/>
+                android:layout_marginRight="30dp"
+                android:background="#8BC34A"/>
 
             <Button
                 android:layout_width="match_parent"
@@ -120,7 +121,8 @@
                 android:text="NO"
                 android:id="@+id/nobutton"
                 android:layout_weight="1"
-                android:layout_marginLeft="30dp"/>
+                android:layout_marginLeft="30dp"
+                android:background="#E57373"/>
         </LinearLayout>
 
         <LinearLayout
