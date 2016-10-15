@@ -10,6 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/jackson-core-2.8.4" />
+            <option value="$PROJECT_DIR$/jackson-databind-2.8.4" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
