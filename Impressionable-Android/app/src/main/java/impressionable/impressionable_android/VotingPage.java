@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.io.*;
 import javax.json.*;
 //import com.fasterxml.jackson.databind.ObjectMapper;
-
+import java.util.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -20,6 +20,8 @@ public class VotingPage extends AppCompatActivity {
 
     int currentIndex = 0;
     int maxIndex = 0;
+    //int[] votes;
+    ArrayList<Integer> votes = new ArrayList();
 
     TextView txtName;
     TextView txtMajor;
@@ -38,7 +40,6 @@ public class VotingPage extends AppCompatActivity {
         txtMinor = (TextView)findViewById(R.id.txtviewMinor);
         txtYear = (TextView)findViewById(R.id.txtviewYear);
         txtGPA = (TextView)findViewById(R.id.txtviewGPA);
-
     }
 
     @Override
@@ -64,7 +65,10 @@ public class VotingPage extends AppCompatActivity {
 
     public void loadFromJson(View v){   //Loads user data from json
         displayInfo(currentIndex);
-
+        //votes = new int[maxIndex];
+        //for(int i = 0; i<maxIndex; i++){
+        //    votes[i]=0;
+        //}
     }
 
     public void buttonPrevious(View v){
@@ -109,12 +113,16 @@ public class VotingPage extends AppCompatActivity {
         txtGPA.setText(gpa);
     }
 
-    void buttonYes(View v){
-
+    public void buttonYes(View v){
+        votes.add(currentIndex, 1);
+        currentIndex++;
+        displayInfo(currentIndex);
     }
 
-    void buttonNo(View v){
-
+    public void buttonNo(View v){
+        votes.add(currentIndex, -1);
+        currentIndex++;
+        displayInfo(currentIndex);
     }
 
     static String convertStreamToString(java.io.InputStream is) {
@@ -122,14 +130,12 @@ public class VotingPage extends AppCompatActivity {
         return s.hasNext() ? s.next() : "";
     }
 
-    int[] votes = new int[maxIndex];
-
-    public JsonObject createResults(int[] votes){
+    public JsonObject createResults(ArrayList<Integer> votes){
         JsonBuilderFactory factory = Json.createBuilderFactory(null);
         JsonObjectBuilder json = factory.createObjectBuilder();
         JsonArrayBuilder users = factory.createArrayBuilder();
             for(int i = 0; i<maxIndex; i++){
-                users.add(votes[i]);
+                users.add(votes.get(i));
             }
         json.add("users", users);
         return json.build();
