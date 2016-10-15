@@ -35,14 +35,7 @@ public class VotingPage extends AppCompatActivity {
         txtMinor = (TextView)findViewById(R.id.txtviewMinor);
         txtYear = (TextView)findViewById(R.id.txtviewYear);
         txtGPA = (TextView)findViewById(R.id.txtviewGPA);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
     }
 
     @Override

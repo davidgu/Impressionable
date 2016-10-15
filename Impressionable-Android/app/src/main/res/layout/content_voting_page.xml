@@ -18,7 +18,8 @@
             android:layout_height="wrap_content"
             android:id="@+id/name"
             android:layout_margin="16dp"
-            android:text="Name" />
+            android:text="Name"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,7 +27,8 @@
             android:layout_below="@id/name"
             android:id="@+id/major"
             android:layout_margin="16dp"
-            android:text="Major"/>
+            android:text="Major"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -34,7 +36,8 @@
             android:layout_below="@id/major"
             android:id="@+id/minor"
             android:layout_margin="16dp"
-            android:text="Minor"/>
+            android:text="Minor"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -42,7 +45,8 @@
             android:id="@+id/year"
             android:layout_below="@id/minor"
             android:text="Year"
-            android:layout_margin="16dp"/>
+            android:layout_margin="16dp"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,54 +54,9 @@
             android:id="@+id/gpa"
             android:layout_below="@id/year"
             android:text="GPA"
-            android:layout_margin="16dp"/>
+            android:layout_margin="16dp"
+            android:textColor="@android:color/black"/>
 
-
-
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="Name ex"
-            android:ems="15"
-            android:id="@+id/txtviewName"
-            android:layout_toRightOf="@id/name"
-            android:layout_margin="8dp" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="Psychology ex"
-            android:ems="15"
-            android:id="@+id/txtviewMinor"
-            android:layout_alignBaseline="@+id/minor"
-            android:layout_alignBottom="@+id/minor"
-            android:layout_alignLeft="@+id/txtviewMajor"
-            android:layout_alignStart="@+id/txtviewMajor" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="Engineering ex"
-            android:ems="15"
-            android:id="@+id/txtviewMajor"
-            android:layout_below="@+id/name"
-            android:layout_alignLeft="@+id/txtviewName"
-            android:layout_alignStart="@+id/txtviewName" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:text="1"
-            android:ems="10"
-            android:layout_above="@+id/gpa"
-            android:layout_alignLeft="@+id/txtviewMinor"
-            android:layout_alignStart="@+id/txtviewMinor"
-            android:id="@+id/txtviewYear" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -113,6 +72,7 @@
                 android:id="@+id/buttonYes"
                 android:layout_weight="1"
                 android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
                 android:background="#8BC34A"/>
 
             <Button
@@ -122,6 +82,7 @@
                 android:id="@+id/buttonNo"
                 android:layout_weight="1"
                 android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:background="#E57373"/>
         </LinearLayout>
 
@@ -165,18 +126,76 @@
                 android:text="Load"
                 android:id="@+id/buttonLoad"
                 android:onClick="loadFromJson" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text=""
+                android:ems="15"
+                android:id="@+id/session"
+                android:layout_weight="1" />
         </LinearLayout>
 
-        <EditText
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:text="3.8"
             android:ems="10"
             android:id="@+id/txtviewGPA"
-            android:layout_below="@+id/txtviewYear"
+            android:layout_alignBaseline="@+id/gpa"
+            android:layout_alignBottom="@+id/gpa"
             android:layout_alignLeft="@+id/txtviewYear"
             android:layout_alignStart="@+id/txtviewYear" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name ex"
+            android:ems="15"
+            android:id="@+id/txtviewName"
+            android:layout_alignBaseline="@+id/name"
+            android:layout_alignBottom="@+id/name"
+            android:layout_toRightOf="@+id/name"
+            android:layout_toEndOf="@+id/name"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Psychology ex"
+            android:ems="15"
+            android:id="@+id/txtviewMinor"
+            android:layout_alignBaseline="@+id/minor"
+            android:layout_alignBottom="@+id/minor"
+            android:layout_alignLeft="@+id/txtviewMajor"
+            android:layout_alignStart="@+id/txtviewMajor" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Engineering ex"
+            android:ems="15"
+            android:id="@+id/txtviewMajor"
+            android:layout_alignBaseline="@+id/major"
+            android:layout_alignBottom="@+id/major"
+            android:layout_alignLeft="@+id/txtviewName"
+            android:layout_alignStart="@+id/txtviewName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="1"
+            android:ems="10"
+            android:id="@+id/txtviewYear"
+            android:layout_alignBaseline="@+id/year"
+            android:layout_alignBottom="@+id/year"
+            android:layout_alignLeft="@+id/txtviewMinor"
+            android:layout_alignStart="@+id/txtviewMinor" />
 
     </RelativeLayout>
 
