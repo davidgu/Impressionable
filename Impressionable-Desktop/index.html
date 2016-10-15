@@ -10,15 +10,15 @@
 
 <link type="text/css" rel="stylesheet" href="./css/main.css" />
 <link type="text/css" rel="stylesheet" href="./css/login.css" />
-
+<link type="text/css" rel="stylesheet" href="./css/home.css" />
 
 <head>
     <title>Impressionable</title>
     <meta charset="UTF-8">
 </head>
 
-<body ng-app="impressionableApp" ng-controller="userController as userCtrl" id="background" ng-cloak="true">
-  <img id="loginCrest" ng-src="{{ backgroundImg }}" />
+<body ng-app="impressionableApp" ng-controller="userController" id="background" ng-cloak="true">
+  <div></div>
   <div>
     <div id="loginTitle" ng-hide="mainScreen.state"> Impressionable </div>
     <div class="foreground" ng-show="loginScreen.state">
@@ -29,26 +29,68 @@
       <h1 id="loginCredit"> Created by <a class="link" onclick="openExternalLink('https://github.com/taran-gill')">Taran Gill</a>,
         <a class="link" onclick="openExternalLink('https://github.com/david-GU')">David Gu</a>,
         <a class="link" onclick="openExternalLink('https://github.com/hansenngai')"> Hansen Ngai</a>,
-        and Shayla Stausgaard
-        <a class="link" onclick="openExternalLink('https://hackwestern.com/')"> for Western Hacks 3 </a>
+        and Shayla Stausgaard for
+        <a class="link" onclick="openExternalLink('https://hackwestern.com/')">  Western Hacks 3 </a>
       </h1>
       </div>
     </div>
     <div class="foreground" ng-show="signInScreen.state">
       <div class="enableJQuery">
         <img class="loginBackArrow" src="images/backarrow.jpg" ng-click="changeToTrue(0, screenList, 'state')"/>
-        <form ng-submit="login(loginUsername, changeToTrue, 3, screenList, 'state')">
+        <form ng-submit="login(loginUsername, loginPassword, changeToTrue, 3, screenList, 'state')">
           <h2 id="signInUsername"> Enter your username: <input id="signInInput" type="text" ng-model="loginUsername"> </h2>
-          <div ng-click="login(loginUsername, changeToTrue, 3, screenList, 'state')" id="loginButton"> Sign In </div>
+          <h2 id="signInPassword"> Enter your password: <input id="signInInput" type="password" ng-model="loginPassword"> </h2>
+          <div ng-click="login(loginUsername, loginPassword, changeToTrue, 3, screenList, 'state')" id="loginButton"> Sign In </div>
         </form>
         <div id="usernameError" ng-hide="authenticatedLogin"> {{usernameMessage}} </div>
         <div id="usernameMessage" ng-show="authenticatedLogin"> {{usernameMessage}} </div>
       </div>
     </div>
+    <div class="foreground" ng-show="signUpScreen.state">
+      <div class="enableJQuery">
+        <img class="loginBackArrow" src="images/backarrow.jpg" ng-click="changeToTrue(0, screenList, 'state')"/>
+        <form ng-submit="addUser(signUpUsername, signUpName, changeToTitleCase)">
+          <h2 id="signUpUsername"> Enter a username: &nbsp &nbsp &nbsp &nbsp<input type="text" ng-model="signUpUsername"> </h2>
+          <h2 id="signUpName"> Enter your name:&nbsp &nbsp &nbsp &nbsp <input type="text" ng-model="signUpName"> </h2>
+          <h2 id="signUpPassword"> Enter your password:&nbsp <input type="password" ng-model="signUpPassword"> </h2>
+          <div ng-click="addUser(signUpUsername, signUpName, signUpPassword)" id="registerButton"> Register </div>
+          <br> <br> <br> <br> <br> <br>
+        </form>
+        <div id="signUpError" ng-hide="authenticatedSignUp"> {{signUpMessage}} </div>
+        <div id="signUpMessage" ng-show="authenticatedSignUp"> {{signUpMessage}} </div>
+      </div>
+    </div>
+  </div>
+  <div class="foreground" ng-controller="homeController" ng-show="mainScreen.state">
+    <img id="logoutImage" ng-click="changeToTrue(1, screenList, 'state')" src="images/logout.jpg" />
+    <div ng-show="homeScreen.state">
+      <div id="updateInfoButton" ng-click="changeToTrue(1, homeList, 'state')"> Update Information </div>
+      <div id="createSessionButton" ng-click="changeToTrue(2, homeList, 'state')"> Create New Session </div>
+      <input id="joinSessionInput" type="text" ng-model="chosenSessionID">
+      <div id="joinSessionButton" ng-click="addSessionApp(chosenSessionID)"> Upload Information to Above Session </div>
+    </div>
+    <div ng-show="updateInfoScreen.state">
+      <h1 id="welcome"> Hi {{user.realName}}, <br> Please change the following: </h1>
+      <h2 class="updateInfoFields"> Major: <input type="text" style="margin-left:500px;" ng-model="amajor"></h2>
+      <h2 class="updateInfoFields"> Minor (leave blank if not applicable): <input type="text" style="margin-left:195px;" ng-model="aminor"></h2>
+      <h2 class="updateInfoFields"> Year of study (leave blank if not applicable): <input type="text" style="margin-left:120px;" ng-model="ayear"></h2>
+      <h2 class="updateInfoFields"> GPA (accurate to two decimals) <input type="text" style="margin-left:250px;" ng-model="agpa"></h2>
+      <div id="updateInfoButtonSelect" ng-click="updateUser(amajor, aminor, ayear, agpa)"> Submit Changes </div>
+      <h2 class="updateInfoFields"> {{updateUserMsg}} </h2>
+    </div>
+    <div ng-show="createSessionScreen.state">
+      <h1 ng-click="createSession('taran')" id="createSessionButtonSelect"> Create a New Session </h1> <br> <br><br> <br> <br> <br><br> <br><br> <br><br> <br><br> <br><br> <br>
+      <h1 class="sessionID"> The admin's session ID is {{adminID}} </h1>
+      <h1 class="sessionID"> The applicant's session ID is {{applicantID}} </h1>
+    </div>
+
+
   </div>
 </body>
 
 <script type="text/javascript" src="js/init.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
 <script>if (window.module) module = window.module;</script>
 
 </html>
