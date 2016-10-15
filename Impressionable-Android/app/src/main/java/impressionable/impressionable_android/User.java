@@ -3,7 +3,6 @@ package impressionable.impressionable_android;
 /**
  * Created by David on 2016-10-15.
  */
-import java.io.*;
 
 
 public class User {
