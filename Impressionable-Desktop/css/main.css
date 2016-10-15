@@ -1,0 +1,17 @@
+* {
+  overflow: hidden;
+	-webkit-user-select: none;
+}
+
+#background {
+  background-color: black;
+  display: inline;
+}
+
+#foreground {
+  width: 1352px;
+  height: 2000px;
+  background-color: black;
+  margin: 0 auto;
+  margin-top: -20px;
+}
