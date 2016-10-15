@@ -53,11 +53,11 @@ public class VotingPage extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void loadFromJson(String filePath){   //Loads user data from json
+    public void loadFromJson(){   //Loads user data from json
         ObjectMapper mapper = new ObjectMapper();
         SessionData sessionData = new SessionData();
         try {
-            sessionData = mapper.readValue(new File(filePath), SessionData.class);
+            sessionData = mapper.readValue(new File("users.json"), SessionData.class);
         }
         catch(Exception e){
             System.out.println(e);

@@ -6,7 +6,7 @@ package impressionable.impressionable_android;
 
 import java.util.ArrayList;
 
-public class SessionData {
+class SessionData {
 
     private ArrayList<User> userData = new ArrayList<>();
 
@@ -20,7 +20,7 @@ public class SessionData {
         userData.add(user);
     }
 
-    public ArrayList<User> getSessionData(){
+    ArrayList<User> getSessionData(){
         return userData;
     }
 
