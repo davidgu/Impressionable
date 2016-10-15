@@ -1,0 +1,14 @@
+{
+  "name": "impressionable",
+  "version": "0.0.1",
+  "description": "",
+  "main": "browser.js",
+  "devDependencies": {
+    "electron-prebuilt": "^0.35.2"
+  },
+  "scripts": {
+    "start": "electron browser.js"
+  },
+  "author": "Taran Gill, David Gu, Hansen Ngai, Shayla Stausgaard",
+  "license": "MIT"
+}
