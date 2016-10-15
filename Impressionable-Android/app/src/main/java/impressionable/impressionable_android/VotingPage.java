@@ -10,17 +10,19 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import java.io.*;
-import java.util.*;
 //import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.io.File;
 
 public class VotingPage extends AppCompatActivity {
 
-
+    int currentIndex = 0;
+    int maxIndex = 0;
+    TextView txtName;
+    TextView txtMajor;
+    TextView txtMinor;
+    TextView txtYear;
+    TextView txtGPA;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,11 @@ public class VotingPage extends AppCompatActivity {
         setContentView(R.layout.activity_voting_page);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        txtName = (TextView)findViewById(R.id.txtviewName);
+        txtMajor = (TextView)findViewById(R.id.txtviewMajor);
+        txtMinor = (TextView)findViewById(R.id.txtviewMinor);
+        txtYear = (TextView)findViewById(R.id.txtviewYear);
+        txtGPA = (TextView)findViewById(R.id.txtviewGPA);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,29 +67,57 @@ public class VotingPage extends AppCompatActivity {
     }
 
     public void loadFromJson(View v){   //Loads user data from json
-        String text = new String();
-        TextView t = (TextView)findViewById(R.id.editText2);
-
-
-        try {
-            InputStream inputStream = getAssets().open("users.json");
-            String text2 = convertStreamToString(inputStream);
-            JSONArray jsonArray = new JSONArray(text2);
-            text = jsonArray.getJSONObject(1).getString("name");
-
-        }
-        catch(Exception e){
-            //t.setText(e.getClass().getName());
-        }
-
-        //t.setText(sessionData.getSessionData().get(1).getName());
-        t.setText(text);
-
+        displayInfo(currentIndex);
 
     }
+
+    public void buttonPrevious(View v){
+        if(currentIndex>0){
+            currentIndex--;
+        }
+        displayInfo(currentIndex);
+    }
+
+    public void buttonNext(View v){
+        if(currentIndex<maxIndex-1){
+            currentIndex++;
+        }
+        displayInfo(currentIndex);
+    }
+
+    void displayInfo(int currentIndex){
+        String realName = new String();
+        String major = new String();
+        String minor = new String();
+        String year = new String();
+        String gpa = new String();
+
+        try {
+            InputStream inputStream = getAssets().open("sessionusers.json");
+            String text2 = convertStreamToString(inputStream);
+            JSONArray jsonArray = new JSONArray(text2);
+            realName = jsonArray.getJSONObject(currentIndex).getString("realName");
+            major = jsonArray.getJSONObject(currentIndex).getString("major");
+            minor = jsonArray.getJSONObject(currentIndex).getString("minor");
+            year = jsonArray.getJSONObject(currentIndex).getString("year");
+            gpa = jsonArray.getJSONObject(currentIndex).getString("gpa");
+            maxIndex=jsonArray.length();
+        }
+        catch(Exception e){
+        }
+
+        txtName.setText(realName);
+        txtMajor.setText(major);
+        txtMinor.setText(minor);
+        txtYear.setText(year);
+        txtGPA.setText(gpa);
+    }
+
     static String convertStreamToString(java.io.InputStream is) {
         java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
         return s.hasNext() ? s.next() : "";
     }
+
+
 
 }

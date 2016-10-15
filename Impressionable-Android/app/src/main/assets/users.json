@@ -1,18 +1,18 @@
 [
   {
-    "index": 1,
-    "name": "David Gu",
+    "index": 0,
+    "realName": "David Gu",
     "major": "Software Engineering",
-    "minor": null,
-    "year": 2,
-    "gpa": 4.00
+    "minor": "N/A",
+    "year": "2",
+    "gpa": "4.00"
   },
   {
-    "index": 2,
-    "name": "Gu David",
+    "index": 1,
+    "realName": "Gu David",
     "major": "Engineering Software",
-    "minor": null,
-    "year": 1,
-    "gpa": 4.00
+    "minor": "N/A",
+    "year": "1",
+    "gpa": "4.00"
   }
   ]

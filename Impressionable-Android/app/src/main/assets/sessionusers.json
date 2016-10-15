@@ -1,0 +1,34 @@
+[
+    {
+        "username": "david_gu",
+        "realName": "David Gu",
+        "major": "Software engineering",
+        "minor": "N/A",
+        "year": "0",
+        "gpa": "3.93"
+    },
+    {
+        "username": "shayla_s",
+        "realName": "Shayla Stausgaard",
+        "major": "Business",
+        "minor": "Comp sci",
+        "year": "3",
+        "gpa": "3.8"
+    },
+    {
+        "username": "tarangill97",
+        "realName": "Taran Gill",
+        "major": "Comp engineering",
+        "minor": "Misery",
+        "year": "2",
+        "gpa": "1.53"
+    },
+    {
+        "username": "nhansen",
+        "realName": "Hansen Ngai",
+        "major": "Electrical engineering",
+        "minor": "N/A",
+        "year": "2",
+        "gpa": "3.85"
+    }
+]

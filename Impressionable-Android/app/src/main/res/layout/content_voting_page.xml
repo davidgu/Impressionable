@@ -61,7 +61,7 @@
             android:inputType="textPersonName"
             android:text="Name ex"
             android:ems="15"
-            android:id="@+id/editText"
+            android:id="@+id/txtviewName"
             android:layout_toRightOf="@id/name"
             android:layout_margin="8dp" />
 
@@ -71,11 +71,11 @@
             android:inputType="textPersonName"
             android:text="Psychology ex"
             android:ems="15"
-            android:id="@+id/editText3"
+            android:id="@+id/txtviewMinor"
             android:layout_alignBaseline="@+id/minor"
             android:layout_alignBottom="@+id/minor"
-            android:layout_alignLeft="@+id/editText2"
-            android:layout_alignStart="@+id/editText2" />
+            android:layout_alignLeft="@+id/txtviewMajor"
+            android:layout_alignStart="@+id/txtviewMajor" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -83,10 +83,10 @@
             android:inputType="textPersonName"
             android:text="Engineering ex"
             android:ems="15"
-            android:id="@+id/editText2"
+            android:id="@+id/txtviewMajor"
             android:layout_below="@+id/name"
-            android:layout_alignLeft="@+id/editText"
-            android:layout_alignStart="@+id/editText" />
+            android:layout_alignLeft="@+id/txtviewName"
+            android:layout_alignStart="@+id/txtviewName" />
 
         <EditText
             android:layout_width="wrap_content"
@@ -95,9 +95,9 @@
             android:text="1"
             android:ems="10"
             android:layout_above="@+id/gpa"
-            android:layout_alignLeft="@+id/editText3"
-            android:layout_alignStart="@+id/editText3"
-            android:id="@+id/editText4" />
+            android:layout_alignLeft="@+id/txtviewMinor"
+            android:layout_alignStart="@+id/txtviewMinor"
+            android:id="@+id/txtviewYear" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -110,7 +110,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="YES"
-                android:id="@+id/yesbutton"
+                android:id="@+id/buttonYes"
                 android:layout_weight="1"
                 android:layout_marginRight="30dp"
                 android:background="#8BC34A"/>
@@ -119,7 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="NO"
-                android:id="@+id/nobutton"
+                android:id="@+id/buttonNo"
                 android:layout_weight="1"
                 android:layout_marginLeft="30dp"
                 android:background="#E57373"/>
@@ -137,16 +137,18 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Previous"
-                android:id="@+id/prevbutton"
-                android:layout_weight="1"/>
+                android:id="@+id/buttonPrevious"
+                android:layout_weight="1"
+                android:onClick="buttonPrevious" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Next"
-                android:id="@+id/nextbutton"
-                android:layout_weight="1"/>
+                android:id="@+id/buttonNext"
+                android:layout_weight="1"
+                android:onClick="buttonNext" />
 
         </LinearLayout>
 
@@ -161,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Load"
-                android:id="@+id/loadbutton"
+                android:id="@+id/buttonLoad"
                 android:onClick="loadFromJson" />
         </LinearLayout>
 
@@ -171,10 +173,10 @@
             android:inputType="textPersonName"
             android:text="3.8"
             android:ems="10"
-            android:id="@+id/editText5"
-            android:layout_below="@+id/editText4"
-            android:layout_alignLeft="@+id/editText4"
-            android:layout_alignStart="@+id/editText4" />
+            android:id="@+id/txtviewGPA"
+            android:layout_below="@+id/txtviewYear"
+            android:layout_alignLeft="@+id/txtviewYear"
+            android:layout_alignStart="@+id/txtviewYear" />
 
     </RelativeLayout>
 
