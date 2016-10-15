@@ -1,0 +1,193 @@
+.loginBackArrow {
+  width: 100px;
+  height: auto;
+  position: fixed;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+#loginTitle {
+  color: white;
+  font-size: 108px;
+  font-family: 'Oleo Script'cursive Impact;
+  margin-left: 320px;
+  text-align: center;
+  position: fixed;
+}
+
+
+#loginCrest {
+  width: 1400px;
+  height: auto;
+  margin-left: -50px;
+  margin-top: -50px;
+  opacity: 0.1;
+  position: fixed;
+}
+
+.loginButton {
+  position: absolute;
+  display: block;
+  background-color: #00ccff;
+	border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+	width: 200px;
+	height: 40px;
+  margin-left: 560px;
+  margin-top: 500px;
+  font-size: 35px;
+  cursor: pointer;
+	border-radius: 15px;
+  position: fixed;
+}
+
+.loginButton:hover {
+  background-color: #00a3cc;
+}
+
+.loginButton:active {
+  background-color: #007a99;
+}
+
+#loginCredit {
+  color: white;
+  margin-left: 45px;
+  margin-top: 560px;
+  position: fixed;
+}
+
+.link {
+	text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#signInUsername {
+  color: white;
+  position: fixed;
+  margin-left: 450px;
+  margin-top: 525px;
+}
+
+#loginButton, #enterButton {
+  display: absolute;
+  background-color: #00ccff;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  height: 40px;
+  font-size: 35px;
+  margin-left:575px;
+  margin-top: 580px;
+  cursor: pointer;
+  border-radius: 15px;
+  position: fixed;
+}
+
+#loginButton:hover {
+  background-color: #00a3cc;
+}
+
+#loginButton:active {
+  background-color: #007a99;
+}
+
+#usernameMessage {
+  color: green;
+  font-size: 24px;
+  margin-top: 490px;
+  text-align: center;
+}
+
+#usernameError {
+  color: red;
+  font-size: 24px;
+  margin-top: 490px;
+  text-align: center;
+}
+
+#signUpUsername {
+  color: white;
+  position: fixed;
+  margin-left: 250px;
+  margin-top: 500px;
+}
+
+#signUpUsername input {
+  width: 195px;
+}
+
+#signUpName {
+  color: white;
+  position: fixed;
+  margin-left: 250px;
+  margin-top: 550px;
+}
+
+#signUpName input {
+  width: 195px;
+}
+
+#signUpSchool {
+  color: white;
+  vertical-align: top;
+  margin-left: 249px;
+  margin-top: 550px;
+  position: fixed;
+}
+
+#signUpSchool span {
+  cursor: default;
+}
+
+#signUpSchool select option {
+  height: 5px;
+  overflow-y: scroll;
+}
+
+#signUpMessage {
+  color: green;
+  font-size: 24px;
+  margin-top: 360px;
+  margin-left: 510px;
+  position: fixed;
+}
+
+#signUpError {
+  color: red;
+  font-size: 24px;
+  margin-top: 360px;
+  margin-left: 510px;
+  text-align: center;
+  position: fixed;
+}
+
+#registerButton {
+  position: absolute;
+  display: block;
+  background-color: #00ccff;
+	border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+	width: 200px;
+	height: 40px;
+  margin-left: 725px;
+  margin-top: 520px;
+  font-size: 35px;
+  cursor: pointer;
+	border-radius: 15px;
+  position: fixed;
+}
+
+#registerButton:hover {
+  background-color: #00a3cc;
+}
+
+#registerButton:active {
+  background-color: #007a99;
+}
