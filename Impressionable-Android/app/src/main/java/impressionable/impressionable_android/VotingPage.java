@@ -10,14 +10,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 import java.io.*;
+import javax.json.*;
 //import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class VotingPage extends AppCompatActivity {
 
     int currentIndex = 0;
     int maxIndex = 0;
+
     TextView txtName;
     TextView txtMajor;
     TextView txtMinor;
@@ -106,11 +109,31 @@ public class VotingPage extends AppCompatActivity {
         txtGPA.setText(gpa);
     }
 
+    void buttonYes(View v){
+
+    }
+
+    void buttonNo(View v){
+
+    }
+
     static String convertStreamToString(java.io.InputStream is) {
         java.util.Scanner s = new java.util.Scanner(is).useDelimiter("\\A");
         return s.hasNext() ? s.next() : "";
     }
 
+    int[] votes = new int[maxIndex];
+
+    public JsonObject createResults(int[] votes){
+        JsonBuilderFactory factory = Json.createBuilderFactory(null);
+        JsonObjectBuilder json = factory.createObjectBuilder();
+        JsonArrayBuilder users = factory.createArrayBuilder();
+            for(int i = 0; i<maxIndex; i++){
+                users.add(votes[i]);
+            }
+        json.add("users", users);
+        return json.build();
+    }
 
 
 }

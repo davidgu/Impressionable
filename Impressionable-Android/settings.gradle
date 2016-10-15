@@ -1,1 +1,1 @@
-include ':app', ':jackson-core-2.8.4', ':jackson-databind-2.8.4'
+include ':app', ':jackson-core-2.8.4', ':jackson-databind-2.8.4', ':javax.json-api-1.0'
