@@ -1,1 +1,1 @@
-include ':app', ':jackson-core-2.8.4', ':jackson-databind-2.8.4', ':javax.json-api-1.0'
+include ':app', ':jackson-core-2.8.4', ':jackson-databind-2.8.4', ':javax.json-api-1.0', ':commons-net-3.3', ':dropbox-core-sdk-2.1.2'

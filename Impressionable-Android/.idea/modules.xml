@@ -4,9 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Impressionable-Android.iml" filepath="$PROJECT_DIR$/Impressionable-Android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/commons-net-3.3/commons-net-3.3.iml" filepath="$PROJECT_DIR$/commons-net-3.3/commons-net-3.3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dropbox-core-sdk-2.1.2/dropbox-core-sdk-2.1.2.iml" filepath="$PROJECT_DIR$/dropbox-core-sdk-2.1.2/dropbox-core-sdk-2.1.2.iml" />
       <module fileurl="file://$PROJECT_DIR$/jackson-core-2.8.4/jackson-core-2.8.4.iml" filepath="$PROJECT_DIR$/jackson-core-2.8.4/jackson-core-2.8.4.iml" />
       <module fileurl="file://$PROJECT_DIR$/jackson-databind-2.8.4/jackson-databind-2.8.4.iml" filepath="$PROJECT_DIR$/jackson-databind-2.8.4/jackson-databind-2.8.4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/javax.json-api-1.0/javax.json-api-1.0.iml" filepath="$PROJECT_DIR$/javax.json-api-1.0/javax.json-api-1.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/javax.json-api-1.0/javax.json-api-1.0.iml" filepath="$PROJECT_DIR$/javax.json-api-1.0/javax.json-api-1.0.iml" />
     </modules>
   </component>
