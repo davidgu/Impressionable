@@ -1,0 +1,20 @@
+[
+    {
+        "username": "shayla",
+        "realName": "Shayla",
+        "password": "shayla",
+        "major": "Business",
+        "minor": "Comp Sci",
+        "year": "3",
+        "gpa": "4.0"
+    },
+    {
+        "username": "taran",
+        "realName": "Taran",
+        "password": "taran",
+        "major": "1",
+        "minor": "2",
+        "year": "N/A",
+        "gpa": "4"
+    }
+]

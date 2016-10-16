@@ -1,0 +1,138 @@
+#logoutImage {
+  width: 70px;
+  height: 70px;
+  margin-left: 1270px;
+  margin-top: -10px;
+  transition: 0.3s;
+  cursor: pointer;
+  position: fixed;
+  display: inline;
+}
+
+#logoutImage:hover {
+  opacity: 0.7;
+}
+
+#logoutImage:active {
+  opacity: 0.4;
+}
+
+#updateInfoButton {
+  position: absolute;
+  display: block;
+  background-color: #00ccff;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  height: 40px;
+  margin-left: 300px;
+  margin-top: 300px;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 15px;
+  position: fixed;
+}
+
+#createSessionButton {
+  position: absolute;
+  display: block;
+  background-color: #00ccff;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: 350px;
+  height: 40px;
+  margin-left: 800px;
+  margin-top: 300px;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 15px;
+  position: fixed;
+}
+
+#joinSessionInput {
+  margin-left: 570px;
+  margin-top: 500px;
+  width: 200px;
+}
+
+#joinSessionButton {
+  position: absolute;
+  display: block;
+  background-color: #00ccff;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: 400px;
+  height: 40px;
+  margin-left: 450px;
+  margin-top: 70px;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 15px;
+  position: fixed;
+}
+
+#updateInfoButton:hover, #createSessionButton:hover, #updateInfoButtonSelect:hover {
+  background-color: #00a3cc;
+}
+
+#updateInfoButton:active, #createSessionButton:active, #updateInfoButtonSelect:active {
+  background-color: #007a99;
+}
+
+#welcome {
+  color: white;
+  text-align: center;
+}
+
+.updateInfoFields {
+  color: white;
+  text-align: center;
+}
+
+#updateInfoButtonSelect {
+  position: absolute;
+  display: block;
+  background-color: #00ccff;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  height: 40px;
+  margin-left: 585px;
+  margin-top: 100px;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 15px;
+  position: fixed;
+}
+
+#createSessionButtonSelect {
+  position: absolute;
+  display: block;
+  background-color: #00ccff;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  width: 400px;
+  height: 40px;
+  margin-left: 480px;
+  margin-top: 200px;
+  font-size: 35px;
+  cursor: pointer;
+  border-radius: 15px;
+  position: fixed;
+}
+
+.sessionID {
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}

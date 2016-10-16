@@ -71,6 +71,13 @@
   margin-top: 525px;
 }
 
+#signInPassword {
+  color: white;
+  position: fixed;
+  margin-left: 450px;
+  margin-top: 570px;
+}
+
 #loginButton, #enterButton {
   display: absolute;
   background-color: #00ccff;
@@ -82,7 +89,7 @@
   height: 40px;
   font-size: 35px;
   margin-left:575px;
-  margin-top: 580px;
+  margin-top: 630px;
   cursor: pointer;
   border-radius: 15px;
   position: fixed;
@@ -132,6 +139,17 @@
   width: 195px;
 }
 
+#signUpPassword {
+  color: white;
+  position: fixed;
+  margin-left: 250px;
+  margin-top: 600px;
+}
+
+#signUpPassword input {
+  width: 195px;
+}
+
 #signUpSchool {
   color: white;
   vertical-align: top;
@@ -177,7 +195,7 @@
 	width: 200px;
 	height: 40px;
   margin-left: 725px;
-  margin-top: 520px;
+  margin-top: 550px;
   font-size: 35px;
   cursor: pointer;
 	border-radius: 15px;

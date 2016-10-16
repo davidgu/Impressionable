@@ -1,0 +1,35 @@
+[
+    {
+        "adminID": "taran1476566861981",
+        "applicantID": "taran26184052",
+        "apps": [
+            {
+                "username": "taran",
+                "realName": "Taran",
+                "major": "1",
+                "minor": "2",
+                "year": "N/A",
+                "gpa": "4"
+            }
+        ]
+    },
+    {
+        "adminID": "taran1476566992862",
+        "applicantID": "taran21647697",
+        "apps": [
+            {
+                "username": "shayla",
+                "realName": "Shayla",
+                "major": "Business",
+                "minor": "Comp Sci",
+                "year": "3",
+                "gpa": "4.0"
+            }
+        ]
+    },
+    {
+        "adminID": "taran1476567039099",
+        "applicantID": "taran56559055",
+        "apps": []
+    }
+]
