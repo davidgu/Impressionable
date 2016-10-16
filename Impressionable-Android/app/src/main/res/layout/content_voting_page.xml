@@ -57,11 +57,50 @@
             android:layout_margin="16dp"
             android:textColor="@android:color/black"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/skills"
+            android:layout_below="@id/gpa"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/skill1"
+                android:text=""/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/skill2"
+                android:text=""/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/skill3"
+                android:text=""/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/skill4"
+                android:text=""/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/skill5"
+                android:text=""/>
+
+
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/gpa"
+            android:layout_below="@id/skills"
             android:id="@+id/yesno"
             android:orientation="horizontal">
 
@@ -71,7 +110,7 @@
                 android:text="YES"
                 android:id="@+id/buttonYes"
                 android:layout_weight="1"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="38dp"
                 android:layout_marginLeft="30dp"
                 android:background="#8BC34A"
                 android:onClick="buttonYes" />
@@ -82,7 +121,7 @@
                 android:text="NO"
                 android:id="@+id/buttonNo"
                 android:layout_weight="1"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginRight="30dp"
                 android:background="#E57373"
                 android:onClick="buttonNo" />
@@ -91,7 +130,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/yesno"
+            android:layout_below="@id/bottom"
             android:orientation="horizontal"
             android:id="@+id/previous">
 
@@ -115,10 +154,12 @@
 
         </LinearLayout>
 
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/previous"
+            android:layout_below="@id/yesno"
             android:orientation="horizontal"
             android:id="@+id/bottom">
 
@@ -127,6 +168,7 @@
                 android:layout_height="wrap_content"
                 android:text="Load"
                 android:id="@+id/buttonLoad"
+                android:layout_marginTop="8dp"
                 android:onClick="loadFromJson" />
 
             <EditText
@@ -137,12 +179,13 @@
                 android:ems="15"
                 android:id="@+id/session"
                 android:layout_weight="1" />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/bottom"
+            android:layout_below="@id/previous"
             android:id="@+id/realbottom">
 
             <Button
