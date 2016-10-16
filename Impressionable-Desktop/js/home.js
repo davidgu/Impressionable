@@ -8,4 +8,8 @@ angular
       $scope.updateInfoScreen = {state: false},
       $scope.createSessionScreen = {state: false}
     ];
-  })
+    $scope.qualitiesList = [
+      $scope.qualitiesScreen = {state: false},
+      $scope.sessionScreen = {state: false}
+    ];
+  });

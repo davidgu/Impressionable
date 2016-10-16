@@ -7,6 +7,7 @@ var openExternalLink = (link) => {
     shell.openExternal(link);
 };
 
+
 angular.module('impressionableApp', []);
 
 angular
@@ -124,7 +125,7 @@ angular
       $scope.updateUserMsg = "User updated!";
     };
 
-    $scope.createSession = (name) => {
+    $scope.createSession = (name, q1, q2, q3, q4, q5) => {
       let time = new Date();
       $scope.adminID = String(name) + time.valueOf();
       $scope.applicantID = String(name) + String(Math.floor((Math.random() * 100000000) + 1));
@@ -135,6 +136,13 @@ angular
 
       object.adminID = $scope.adminID;
       object.applicantID = $scope.applicantID;
+      object.qualities = {
+        quality1: q1,
+        quality2: q2,
+        quality3: q3,
+        quality4: q4,
+        quality5: q5
+      };
       object.apps = [];
 
       sessionData.push(object);
@@ -160,9 +168,11 @@ angular
 
             let configSessionJSON = angular.toJson(sessionData, 4);
             fs.writeFileSync('session.json', configSessionJSON);
+            $scope.joinSessionMsg = "Successfully joined session!"
           }
     })
-  }
+  };
+
 
     //changeToTrue takes a list and changes all elements to the falseValue except the one at index elem, which becomes trueValue
     $rootScope.changeToTrue = (elem, list, property) => {
